@@ -1,5 +1,7 @@
 name: multi job
-on: push
+on: 
+  schedule:
+    - cron: '2 * * * *' # min hour day-month month day-week # 9am IST
 jobs:
   build:
     runs-on: ubuntu-latest
