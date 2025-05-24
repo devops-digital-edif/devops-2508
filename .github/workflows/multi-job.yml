@@ -20,7 +20,7 @@ jobs:
         run: echo "deployment started and completed"
   status:
     runs-on: ubuntu-latest
-    needs: build
+    needs: deploy
     steps:
       - name: workflow status
         run: echo "build and deployment done"
