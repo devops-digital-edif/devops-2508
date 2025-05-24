@@ -1,0 +1,21 @@
+name: multi job
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build started
+        run: echo "build job is started"
+      - name: build completed
+        run: echo "build job is completed"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deployment started
+        run: echo "deployment started and completed"
+  status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: workflow status
+        run: echo "build and deployment done"
+    
