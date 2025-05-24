@@ -2,8 +2,14 @@ name: manual trigger
 on:
   workflow_dispatch:
 jobs:
-  push-main:
+  system_info:
     runs-on: ubuntu-latest
     steps:
-      - name: push to main branch
-        run: echo "pushed to main branch"
+      - name: print greetings
+        run: echo "welcome to manual trigger"
+      - name: print working directory
+        run: pwd
+      - name: list files
+        run: ls -a
+      - name: os details
+        run: cat /etc/os-release
