@@ -6,8 +6,11 @@ jobs:
     steps:
       - name: build started
         run: echo "build job is started"
-      - name: build completed
-        run: echo "build job is completed"
+      - name: Checkout
+        uses: actions/checkout@v4.2.2 
+      - name: list files
+        run: ls -a
+        
   deploy:
     runs-on: ubuntu-latest
     steps:
