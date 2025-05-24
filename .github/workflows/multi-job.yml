@@ -14,11 +14,13 @@ jobs:
         run: cat index.html
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: deployment started
         run: echo "deployment started and completed"
   status:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: workflow status
         run: echo "build and deployment done"
