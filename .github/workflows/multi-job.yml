@@ -1,7 +1,6 @@
 name: multi job
 on: 
-  schedule:
-    - cron: '*/2 * * * *' # min hour day-month month day-week 
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
